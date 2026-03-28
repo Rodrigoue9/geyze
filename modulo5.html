@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Módulo 5: CUIDADOS, TIPOS E FAQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#004a75",
+              "secondary-fixed-dim": "#96ccff",
+              "on-primary": "#ffffff",
+              "tertiary-fixed": "#e2e2e2",
+              "on-tertiary-fixed": "#1a1c1c",
+              "on-secondary-container": "#035584",
+              "on-primary-fixed-variant": "#70343e",
+              "secondary": "#206393",
+              "primary": "#8a4853",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#cee5ff",
+              "inverse-on-surface": "#f2f0ee",
+              "primary-container": "#a6606b",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#d7c1c3",
+              "inverse-primary": "#ffb2bc",
+              "surface": "#fbf9f7",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#737575",
+              "tertiary": "#5b5c5c",
+              "primary-fixed-dim": "#ffb2bc",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f5f3f1",
+              "surface-dim": "#dbdad8",
+              "primary-fixed": "#ffd9dd",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e4e2e0",
+              "on-surface-variant": "#524345",
+              "tertiary-fixed-dim": "#c6c6c7",
+              "background": "#fbf9f7",
+              "on-tertiary-container": "#fcfcfc",
+              "surface-variant": "#e4e2e0",
+              "inverse-surface": "#30302f",
+              "secondary-container": "#90c9ff",
+              "surface-bright": "#fbf9f7",
+              "on-surface": "#1b1c1b",
+              "on-background": "#1b1c1b",
+              "on-tertiary-fixed-variant": "#454747",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "outline": "#857374",
+              "surface-container-high": "#eae8e6",
+              "surface-container": "#efedec",
+              "on-secondary-fixed": "#001d32",
+              "on-primary-fixed": "#3a0915",
+              "surface-tint": "#8c4b55"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fbf9f7;
+        color: #1b1c1b;
+      }
+      .serif-heading {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 bg-[#fbf9f7] dark:bg-stone-950/70 backdrop-blur-md bg-gradient-to-b from-[#fbf9f7] to-transparent">
+<a href="index.html" class="flex items-center gap-2">
+<img src="Imagens/logogeyze.jpeg" alt="Geyze Logo" class="h-10 md:h-12 w-auto object-contain">
+</a>
+<nav class="hidden md:flex gap-8">
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#206393] transition-colors" href="sumario.html">Conteúdo</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#206393] transition-colors" href="#">Materiais</a>
+<a class="text-[#8a4853] dark:text-[#b76e79] font-bold border-b-2 border-[#8a4853]" href="modulo5.html">Módulo 5</a>
+</nav>
+<div class="flex items-center gap-4 text-[#8a4853] dark:text-[#b76e79]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-all">account_circle</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-all">help_outline</span>
+</div>
+</header>
+<!-- SideNavBar (Left) -->
+<aside class="hidden lg:flex flex-col h-screen w-72 fixed left-0 top-0 pt-24 pb-8 bg-[#f5f3f1] dark:bg-stone-900 z-40">
+<div class="px-8 mb-6">
+<h2 class="font-serif text-xl text-[#8a4853]">Dra. Geyze</h2>
+<p class="text-xs uppercase tracking-widest text-stone-500">Clinical Excellence</p>
+</div>
+<div class="px-8 mb-8">
+<div class="w-20 h-20 rounded-2xl overflow-hidden shadow-md border-2 border-white">
+<img src="Imagens/geyze2.jpeg" alt="Geyze" class="w-full h-full object-cover">
+</div>
+</div>
+<nav class="flex flex-col gap-1 overflow-y-auto grow">
+<a class="flex items-center gap-3 py-3 px-6 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-l-full ml-4 hover:translate-x-1 transition-transform duration-200" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-sm font-bold">Voltar ao Início</span>
+</a>
+<div class="h-px bg-stone-200 dark:bg-stone-800 mx-8 my-2"></div>
+<a class="flex items-center gap-3 py-3 px-8 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform duration-200 hover:translate-x-1" href="modulo1.html">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+<span class="text-sm font-medium">Módulo 1: Introdução</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-8 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform duration-200 hover:translate-x-1" href="modulo2.html">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="text-sm font-medium">Módulo 2: Anatomia</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-8 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform duration-200 hover:translate-x-1" href="modulo3.html">
+<span class="material-symbols-outlined text-lg">palette</span>
+<span class="text-sm font-medium">Módulo 3: Colorimetria</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-8 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform duration-200 hover:translate-x-1" href="modulo4.html">
+<span class="material-symbols-outlined text-lg">ink_pen</span>
+<span class="text-sm font-medium">Módulo 4: Técnicas</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-8 bg-[#ffffff] dark:bg-stone-800 text-[#8a4853] dark:text-[#b76e79] rounded-l-full ml-4 shadow-sm font-semibold transition-transform duration-200 hover:translate-x-1" href="modulo5.html">
+<span class="material-symbols-outlined text-lg">health_and_safety</span>
+<span class="text-sm font-medium">Módulo 5: Biossegurança</span>
+</a>
+</nav>
+<div class="mt-auto px-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 py-3 px-8 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span class="text-sm">Configurações</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-8 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span class="text-sm">Sair</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:ml-72 pt-28 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<section class="mb-16">
+<h1 class="serif-heading text-5xl md:text-6xl text-primary leading-tight mb-4">Módulo 5: Cuidados, Tipos e FAQ</h1>
+<p class="text-stone-500 text-lg max-w-2xl font-light leading-relaxed">Instruções essenciais para a segurança do procedimento, protocolos pós-laser e o entendimento clínico das variações cutâneas.</p>
+</section>
+<!-- Post-laser Care: Asymmetric Layout -->
+<section class="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-dim rounded-lg overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Close-up of a professional aesthetician applying soothing cooling gel to a patient's eyebrow area with sterile tools in a clean white clinic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiD4o1MtqwS8txNtYJZGd0zB4biAUwAPlOYZWr4RHL7NlNnucZKosRoCpDVZN1wi5ZsWgF9374ByOKf0RE1mLq1_xWsN1xwz1hmJ1othDb4-ITJ_f9eex0JMPvflrw_HO2Onxyhx5I-feFnmnbc1N_s_zEMf0kfPShAmvcHgBFw5tlR8XD2lzW2VIp35ve00Q30a39rJyDyWc0Ys63sop7Smxq4UoTZ1xdMpxSB4ETIT0VxVVAUaw62CpJQlfULwh5gSQYj3_8Xz4s"/>
+</div>
+<div class="absolute -bottom-8 -right-8 p-8 bg-surface-container-lowest shadow-xl max-w-xs rounded-lg border-l-4 border-secondary">
+<p class="text-secondary font-bold text-sm mb-2 uppercase tracking-widest">Protocolo de Segurança</p>
+<p class="text-on-surface-variant text-sm italic">"A regeneração tecidual é tão importante quanto o disparo do laser."</p>
+</div>
+</div>
+<div class="lg:col-span-7 pt-8">
+<h2 class="serif-heading text-3xl text-primary mb-8">Cuidados no Pós-Laser</h2>
+<div class="space-y-8">
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">wash</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Higiene Suave</h4>
+<p class="text-stone-500 leading-relaxed">Lavar a área com sabonete neutro ou antisséptico suave. Evitar esfregar a região tratada nas primeiras 48 horas.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">ac_unit</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Compressas Geladas</h4>
+<p class="text-stone-500 leading-relaxed">Utilizar compressas frias para reduzir o edema e a sensação de calor. Nunca aplicar gelo diretamente na pele.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">light_mode</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Proteção Solar</h4>
+<p class="text-stone-500 leading-relaxed">Uso obrigatório de protetor solar FPS 50+. A exposição solar direta pode causar hiperpigmentação pós-inflamatória.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Intervalos</h4>
+<p class="text-stone-500 leading-relaxed">Respeitar o intervalo mínimo de 30 a 45 dias entre as sessões para permitir a completa cicatrização dérmica.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fitzpatrick Chart: Bento Grid Style -->
+<section class="mb-24">
+<div class="mb-12 text-center">
+<h2 class="serif-heading text-3xl text-primary mb-4">Classificação Fitzpatrick</h2>
+<p class="text-stone-500">Entenda a reatividade da pele à luz solar e ao laser com base na produção de melanina.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="bg-white p-6 rounded-lg text-center shadow-sm border-b-4 border-[#F9EBD8]">
+<div class="w-16 h-16 bg-[#F9EBD8] rounded-full mx-auto mb-4 border border-stone-100"></div>
+<h5 class="font-bold text-primary">Tipo I</h5>
+<p class="text-xs text-stone-500 mt-2">Pele muito clara. Sempre queima, nunca bronzeia.</p>
+</div>
+<div class="bg-white p-6 rounded-lg text-center shadow-sm border-b-4 border-[#F1D2B4]">
+<div class="w-16 h-16 bg-[#F1D2B4] rounded-full mx-auto mb-4 border border-stone-100"></div>
+<h5 class="font-bold text-primary">Tipo II</h5>
+<p class="text-xs text-stone-500 mt-2">Pele clara. Queima facilmente, bronzeia pouco.</p>
+</div>
+<div class="bg-white p-6 rounded-lg text-center shadow-sm border-b-4 border-[#D9A174]">
+<div class="w-16 h-16 bg-[#D9A174] rounded-full mx-auto mb-4 border border-stone-100"></div>
+<h5 class="font-bold text-primary">Tipo III</h5>
+<p class="text-xs text-stone-500 mt-2">Pele morena clara. Queima moderadamente.</p>
+</div>
+<div class="bg-white p-6 rounded-lg text-center shadow-sm border-b-4 border-[#A36D44]">
+<div class="w-16 h-16 bg-[#A36D44] rounded-full mx-auto mb-4 border border-stone-100"></div>
+<h5 class="font-bold text-primary">Tipo IV</h5>
+<p class="text-xs text-stone-500 mt-2">Pele morena moderada. Queima pouco, bronzeia fácil.</p>
+</div>
+<div class="bg-white p-6 rounded-lg text-center shadow-sm border-b-4 border-[#6D4228]">
+<div class="w-16 h-16 bg-[#6D4228] rounded-full mx-auto mb-4 border border-stone-100"></div>
+<h5 class="font-bold text-primary">Tipo V</h5>
+<p class="text-xs text-stone-500 mt-2">Pele morena escura. Raramente queima.</p>
+</div>
+<div class="bg-white p-6 rounded-lg text-center shadow-sm border-b-4 border-[#1B1C1B]">
+<div class="w-16 h-16 bg-[#1B1C1B] rounded-full mx-auto mb-4 border border-stone-100"></div>
+<h5 class="font-bold text-primary">Tipo VI</h5>
+<p class="text-xs text-stone-500 mt-2">Pele negra. Nunca queima, pigmentação profunda.</p>
+</div>
+</div>
+</section>
+<!-- Laser Types & Compatibility Table -->
+<section class="mb-24 bg-surface-container-low p-12 rounded-xl">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-1/3">
+<h2 class="serif-heading text-3xl text-primary mb-4">Que Tipo de Lasers usar?</h2>
+<p class="text-stone-600 leading-relaxed mb-6">A escolha do comprimento de onda (nm) é crucial para atingir o pigmento alvo sem danificar o tecido circundante.</p>
+<div class="bg-primary/10 border-l-4 border-primary p-4 italic text-sm text-primary">
+                        "Comprimentos de onda maiores penetram mais profundamente, enquanto os menores são absorvidos por cores superficiais."
+                    </div>
+</div>
+<div class="lg:w-2/3 overflow-x-auto w-full">
+<table class="w-full text-left bg-white rounded-lg overflow-hidden shadow-sm">
+<thead class="bg-stone-50 border-b border-stone-100">
+<tr>
+<th class="px-6 py-4 font-serif text-primary">Laser / Comprimento</th>
+<th class="px-6 py-4 font-serif text-primary">Cores Indicadas</th>
+<th class="px-6 py-4 font-serif text-primary">Aplicação Comum</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-50">
+<tr class="hover:bg-stone-50 transition-colors">
+<td class="px-6 py-4 font-bold">Nd:YAG 1064nm</td>
+<td class="px-6 py-4">Preto, Azul Escuro</td>
+<td class="px-6 py-4 text-stone-500">Tatuagens e Micropigmentação escura</td>
+</tr>
+<tr class="hover:bg-stone-50 transition-colors">
+<td class="px-6 py-4 font-bold">KTP 532nm</td>
+<td class="px-6 py-4">Vermelho, Laranja</td>
+<td class="px-6 py-4 text-stone-500">Remoção de maquiagem definitiva labial</td>
+</tr>
+<tr class="hover:bg-stone-50 transition-colors">
+<td class="px-6 py-4 font-bold">Ruby 694nm</td>
+<td class="px-6 py-4">Verde, Azul Turquesa</td>
+<td class="px-6 py-4 text-stone-500">Pigmentos coloridos recalcitrantes</td>
+</tr>
+<tr class="hover:bg-stone-50 transition-colors">
+<td class="px-6 py-4 font-bold">Alexandrite 755nm</td>
+<td class="px-6 py-4">Verde, Azul, Preto</td>
+<td class="px-6 py-4 text-stone-500">Versatilidade em remoção multiespectral</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="mb-24">
+<h2 class="serif-heading text-3xl text-primary mb-12 text-center">Dúvidas Frequentes</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-bold text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">question_mark</span>
+                        Como o laser funciona?
+                    </h4>
+<p class="text-stone-500 text-sm leading-relaxed">O laser utiliza o efeito fotomecânico para fragmentar as partículas de pigmento em tamanhos minúsculos, permitindo que o sistema linfático do corpo as elimine naturalmente.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-bold text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">question_mark</span>
+                        Qual a reação da pele?
+                    </h4>
+<p class="text-stone-500 text-sm leading-relaxed">É comum o "frosting" (esbranquiçamento temporário), seguido de leve edema e eritema. Em alguns casos, podem ocorrer pequenas crostas que não devem ser removidas.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-bold text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">question_mark</span>
+                        Existem efeitos colaterais?
+                    </h4>
+<p class="text-stone-500 text-sm leading-relaxed">Se não respeitados os parâmetros e cuidados, pode ocorrer hipocromia ou hipercromia. Cicatrizes são raras quando o protocolo é seguido rigorosamente.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-bold text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">question_mark</span>
+                        Qual a sensação do disparo?
+                    </h4>
+<p class="text-stone-500 text-sm leading-relaxed">Muitos pacientes descrevem como o estalo de um elástico contra a pele. O uso de resfriadores de pele ou anestésicos tópicos minimiza significativamente o desconforto.</p>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="mt-32 text-center py-20 px-8 bg-gradient-to-br from-primary to-primary-container rounded-3xl text-on-primary">
+<span class="material-symbols-outlined text-6xl mb-6" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h2 class="serif-heading text-4xl mb-6">Parabéns pela conclusão do Módulo!</h2>
+<p class="text-primary-fixed text-lg max-w-xl mx-auto mb-10 opacity-90">Você completou toda a jornada teórica de Micropigmentação e Estética. Agora você está pronto para validar seu conhecimento.</p>
+<a href="index.html" class="inline-block bg-white text-primary px-12 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                Concluir Curso e Voltar ao Início
+            </a>
+<p class="mt-6 text-sm opacity-60">Seu certificado será emitido em formato PDF digital imediatamente.</p>
+</section>
+</main>
+<!-- Footer Space -->
+<footer class="lg:ml-72 bg-surface-container-high py-12 px-8 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-[#8a4853] font-serif italic text-lg">
+                CURSO PROFISSIONAL
+            </div>
+<div class="text-stone-500 text-xs">
+                © 2024 Clinical Excellence Academy. Todos os direitos reservados.
+            </div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer">share</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer">print</span>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation (BottomNavBar) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest flex justify-around items-center py-3 border-t border-outline-variant/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center gap-1 text-stone-400" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px]">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-400" href="sumario.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px]">Sumário</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="modulo5.html">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[10px] font-bold">Aulas</span>
+</a>
+<button class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px]">Perfil</span>
+</button>
+</nav>
+</body></html>

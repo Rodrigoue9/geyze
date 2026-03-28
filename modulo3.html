@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#004a75",
+              "secondary-fixed-dim": "#96ccff",
+              "on-primary": "#ffffff",
+              "tertiary-fixed": "#e2e2e2",
+              "on-tertiary-fixed": "#1a1c1c",
+              "on-secondary-container": "#035584",
+              "on-primary-fixed-variant": "#70343e",
+              "secondary": "#206393",
+              "primary": "#8a4853",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#cee5ff",
+              "inverse-on-surface": "#f2f0ee",
+              "primary-container": "#a6606b",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#d7c1c3",
+              "inverse-primary": "#ffb2bc",
+              "surface": "#fbf9f7",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#737575",
+              "tertiary": "#5b5c5c",
+              "primary-fixed-dim": "#ffb2bc",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f5f3f1",
+              "surface-dim": "#dbdad8",
+              "primary-fixed": "#ffd9dd",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e4e2e0",
+              "on-surface-variant": "#524345",
+              "tertiary-fixed-dim": "#c6c6c7",
+              "background": "#fbf9f7",
+              "on-tertiary-container": "#fcfcfc",
+              "surface-variant": "#e4e2e0",
+              "inverse-surface": "#30302f",
+              "secondary-container": "#90c9ff",
+              "surface-bright": "#fbf9f7",
+              "on-surface": "#1b1c1b",
+              "on-background": "#1b1c1b",
+              "on-tertiary-fixed-variant": "#454747",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "outline": "#857374",
+              "surface-container-high": "#eae8e6",
+              "surface-container": "#efedec",
+              "on-secondary-fixed": "#001d32",
+              "on-primary-fixed": "#3a0915",
+              "surface-tint": "#8c4b55"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fbf9f7;
+        color: #1b1c1b;
+      }
+      h1, h2, h3, .serif-brand {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 bg-[#fbf9f7] dark:bg-stone-950/70 backdrop-blur-md bg-gradient-to-b from-[#fbf9f7] to-transparent">
+<a href="index.html" class="flex items-center gap-2">
+<img src="Imagens/logogeyze.jpeg" alt="Geyze Logo" class="h-10 md:h-12 w-auto object-contain">
+</a>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#206393] transition-colors" href="sumario.html">Conteúdo</a>
+<a class="text-[#8a4853] dark:text-[#b76e79] font-bold border-b-2 border-[#8a4853]" href="modulo3.html">Módulo 3</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#206393] transition-colors" href="#">Recursos</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#8a4853] cursor-pointer" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-[#8a4853] cursor-pointer" data-icon="help_outline">help_outline</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen w-72 fixed left-0 top-0 bg-[#f5f3f1] dark:bg-stone-900/50 py-8 gap-2 pt-24 border-r-0">
+<div class="px-8 mb-6">
+<h2 class="font-serif text-xl text-[#8a4853]">Dra. Geyze</h2>
+<p class="text-xs tracking-widest text-stone-500 uppercase">Clinical Excellence</p>
+</div>
+<div class="px-8 mb-8">
+<div class="w-20 h-20 rounded-2xl overflow-hidden shadow-md border-2 border-white">
+<img src="Imagens/geyze2.jpeg" alt="Geyze" class="w-full h-full object-cover">
+</div>
+</div>
+<nav class="flex flex-col gap-1 overflow-y-auto grow">
+<a class="flex items-center gap-3 py-3 px-6 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-l-full ml-4 hover:translate-x-1 transition-transform duration-200" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-sm font-bold">Voltar ao Início</span>
+</a>
+<div class="h-px bg-stone-200 dark:bg-stone-800 mx-8 my-2"></div>
+<a class="flex items-center px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform hover:translate-x-1 cursor-pointer" href="modulo1.html">
+<span class="material-symbols-outlined mr-3" data-icon="menu_book">menu_book</span>
+<span class="text-sm font-medium">Módulo 1: Introdução</span>
+</a>
+<a class="flex items-center px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform hover:translate-x-1 cursor-pointer" href="modulo2.html">
+<span class="material-symbols-outlined mr-3" data-icon="biotech">biotech</span>
+<span class="text-sm font-medium">Módulo 2: Anatomia</span>
+</a>
+<a class="flex items-center px-4 py-3 bg-[#ffffff] dark:bg-stone-800 text-[#8a4853] dark:text-[#b76e79] rounded-l-full ml-4 shadow-sm font-semibold" href="modulo3.html">
+<span class="material-symbols-outlined mr-3" data-icon="palette">palette</span>
+<span class="text-sm">Módulo 3: Colorimetria</span>
+</a>
+<a class="flex items-center px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform hover:translate-x-1 cursor-pointer" href="modulo4.html">
+<span class="material-symbols-outlined mr-3" data-icon="ink_pen">ink_pen</span>
+<span class="text-sm font-medium">Módulo 4: Técnicas</span>
+</a>
+<a class="flex items-center px-4 py-3 text-stone-600 dark:text-stone-400 hover:bg-stone-200/50 rounded-l-full ml-4 transition-transform hover:translate-x-1 cursor-pointer" href="modulo5.html">
+<span class="material-symbols-outlined mr-3" data-icon="health_and_safety">health_and_safety</span>
+<span class="text-sm font-medium">Módulo 5: Biossegurança</span>
+</a>
+</nav>
+<div class="mt-auto px-4 space-y-1 border-t border-stone-200 pt-4">
+<div class="flex items-center px-4 py-3 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4 cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="settings">settings</span>
+<span class="text-sm font-medium">Configurações</span>
+</div>
+<div class="flex items-center px-4 py-3 text-stone-600 hover:bg-stone-200/50 rounded-l-full ml-4 cursor-pointer">
+<span class="material-symbols-outlined mr-3" data-icon="logout">logout</span>
+<span class="text-sm font-medium">Sair</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:ml-72 pt-28 px-8 pb-16 max-w-7xl mx-auto">
+<!-- Hero Section: Editorial Header -->
+<section class="mb-20">
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Capítulo III</span>
+<h1 class="text-5xl md:text-7xl font-serif text-primary leading-tight mb-8">COMPRIMENTOS DE ONDA E MÉTODOS</h1>
+<div class="h-1 w-32 bg-primary-container mb-12"></div>
+<p class="text-xl text-on-surface-variant max-w-3xl leading-relaxed font-body">
+                Neste módulo, exploraremos a física por trás da remoção a laser e os métodos auxiliares, garantindo a compreensão técnica necessária para a segurança do paciente.
+            </p>
+</section>
+<!-- Bento Grid Layout for Concepts -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20">
+<!-- Os Comprimentos de Onda -->
+<div class="md:col-span-8 bg-surface-container-low p-8 rounded-xl shadow-none">
+<h2 class="text-3xl font-serif text-primary mb-6">Os Comprimentos de Onda</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+<div class="space-y-4 font-body text-on-surface leading-relaxed">
+<p>A luz laser é definida por seu comprimento de onda, medido em nanômetros (nm). A escolha do comprimento correto é crucial para atingir pigmentos específicos na derme profunda.</p>
+<div class="flex items-center gap-3 py-3 px-4 bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="straighten">straighten</span>
+<span class="text-sm font-semibold italic">A profundidade é inversamente proporcional à absorção superficial.</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg relative overflow-hidden group">
+<div class="text-xs uppercase tracking-tighter text-stone-400 mb-4">Diagrama de Penetração Térmica</div>
+<div class="flex justify-around items-end h-48 relative border-l-2 border-stone-200 ml-4 pb-2">
+<!-- 532nm bar -->
+<div class="flex flex-col items-center group/bar">
+<div class="w-12 bg-primary h-24 rounded-t-sm transition-all group-hover/bar:brightness-110"></div>
+<span class="text-[10px] mt-2 font-bold">532nm</span>
+<span class="text-[9px] text-stone-500">Epiderme</span>
+</div>
+<!-- 1064nm bar -->
+<div class="flex flex-col items-center group/bar">
+<div class="w-12 bg-secondary h-44 rounded-t-sm transition-all group-hover/bar:brightness-110"></div>
+<span class="text-[10px] mt-2 font-bold">1064nm</span>
+<span class="text-[9px] text-stone-500">Derme Profunda</span>
+</div>
+</div>
+<div class="absolute inset-0 pointer-events-none border border-outline-variant/20 rounded-lg"></div>
+</div>
+</div>
+</div>
+<!-- Role of Macrophages Sidebar -->
+<aside class="md:col-span-4 bg-surface-container-high p-8 rounded-xl flex flex-col justify-center border-l-4 border-secondary relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-xl font-serif text-secondary mb-4">O Papel dos Macrófagos</h3>
+<p class="text-sm leading-relaxed text-on-surface-variant font-body">
+                        Após o disparo do laser fragmentar o pigmento, o sistema imunológico entra em ação. Os macrófagos fagocitam as micropartículas e as transportam via sistema linfático para a eliminação. Sem esse processo biológico, o laser sozinho não removeria a tinta.
+                    </p>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="microbiology">microbiology</span>
+</div>
+</aside>
+</div>
+<!-- Fototermólise Seletiva -->
+<section class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="aspect-video bg-surface-dim rounded-lg overflow-hidden relative shadow-2xl">
+<img alt="Scientific illustration of light pulses hitting pigment molecules" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="abstract artistic visualization of laser light pulses interacting with microscopic pigment particles in golden and magenta light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcXCN_S0M8_1tKbix33Yj7kbRzyLeYzF0jKvTk0sKDjMH4TfPMZDEQM_75XvZam8jjKeiltJaFDO1WE0xCjIZq-RyYizXJO_WpfYuW_OHGxjV-LH1Bj6oVFW7sxl1nBGdTbIGrAeEkIOYl_12JULObZkgVwx9IEoYmhmjLx8IDmjmdTaadwnPYRIaF_SA1X4nPqBqRHJ6y6Fkq6gS8_rAohY48Es1VGMYucwnPBQ0mXT3zI-F3AT08_s3LSOU56Lk2p8Buao2HNv25"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<h2 class="text-4xl font-serif text-primary leading-tight">A Fototermólise Seletiva</h2>
+<div class="h-1 w-16 bg-secondary mb-6"></div>
+<p class="text-lg font-body leading-relaxed text-on-surface">
+                    O princípio de <span class="font-bold">Anderson &amp; Parrish</span> dita que, para destruir um alvo específico (cromóforo) sem danificar o tecido circundante, o tempo de exposição deve ser inferior ao <span class="italic">Tempo de Relaxamento Térmico (TRT)</span> do alvo.
+                </p>
+<div class="p-6 bg-surface-container-low rounded-lg border-l-4 border-primary">
+<p class="text-sm italic font-medium">"A energia deve ser entregue de forma tão rápida que o calor não tenha tempo de se dissipar para as células vizinhas."</p>
+</div>
+</div>
+</section>
+<!-- Laser Types Comparison Table -->
+<section class="mb-20">
+<h2 class="text-3xl font-serif text-primary mb-10 text-center">Protocolos de Laser Padrão</h2>
+<div class="overflow-x-auto rounded-xl bg-surface-container-low">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-primary text-on-primary">
+<th class="p-5 font-serif font-normal">Tipo de Laser</th>
+<th class="p-5 font-serif font-normal">Comprimento de Onda</th>
+<th class="p-5 font-serif font-normal">Alvos Preferenciais</th>
+<th class="p-5 font-serif font-normal">Uso Clínico</th>
+</tr>
+</thead>
+<tbody class="font-body text-sm">
+<tr class="border-b border-outline-variant/30 hover:bg-surface-container-highest transition-colors">
+<td class="p-5 font-bold">Rubi</td>
+<td class="p-5">694 nm</td>
+<td class="p-5">Verde, Preto, Azul Escuro</td>
+<td class="p-5">Tatuagens superficiais e manchas</td>
+</tr>
+<tr class="border-b border-outline-variant/30 hover:bg-surface-container-highest transition-colors">
+<td class="p-5 font-bold">Alexandrite</td>
+<td class="p-5">755 nm</td>
+<td class="p-5">Verde, Azul, Preto</td>
+<td class="p-5">Alta absorção de melanina</td>
+</tr>
+<tr class="border-b border-outline-variant/30 hover:bg-surface-container-highest transition-colors">
+<td class="p-5 font-bold">Nd:YAG</td>
+<td class="p-5">1064 nm / 532 nm</td>
+<td class="p-5">Preto (1064) / Vermelho (532)</td>
+<td class="p-5 text-secondary font-semibold italic">Padrão Ouro para Micropigmentação</td>
+</tr>
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="p-5 font-bold">Pico Second</td>
+<td class="p-5">Variável</td>
+<td class="p-5">Multicolores / Partículas Minúsculas</td>
+<td class="p-5">Ultra-rápido (Picosegundos)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Comparison CW vs Q-Switched -->
+<section class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-stone-400" data-icon="waves">waves</span>
+<h3 class="text-xl font-bold uppercase tracking-widest text-on-surface">CW Lasers</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                    Emissão contínua de luz. O calor é transferido para o tecido por longos períodos, causando grande risco de cicatrizes e danos térmicos desnecessários. Frequentemente obsoleto para remoção de pigmentos.
+                </p>
+<div class="w-full h-1 bg-stone-200 rounded-full">
+<div class="w-full h-full bg-error rounded-full"></div>
+</div>
+<span class="text-[10px] text-error uppercase font-bold mt-2 block">Alto Risco Térmico</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-2 border-primary/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+<h3 class="text-xl font-bold uppercase tracking-widest text-primary">Lasers Q-Switched</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                    Disparos ultra-curtos (nanosegundos) com altíssima potência de pico. O efeito é fotoacústico: a onda de choque fragmenta o pigmento sem "cozinhar" a pele adjacente.
+                </p>
+<div class="w-full h-1 bg-stone-200 rounded-full">
+<div class="w-1/4 h-full bg-secondary rounded-full"></div>
+</div>
+<span class="text-[10px] text-secondary uppercase font-bold mt-2 block">Segurança Clínica Superior</span>
+</div>
+</section>
+<!-- Outros Métodos section -->
+<section class="mb-20">
+<h2 class="text-3xl font-serif text-primary mb-12">Outros Métodos para Remoção</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Salabrasão -->
+<div class="bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container-high border-t-2 border-stone-300">
+<h4 class="font-bold text-on-surface mb-2">Salabrasão</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Uso de sal para "lixar" a pele até atingir o pigmento. Método arcaico, doloroso e com altíssimo risco de queloides.</p>
+</div>
+<!-- Dermoabrasão -->
+<div class="bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container-high border-t-2 border-stone-300">
+<h4 class="font-bold text-on-surface mb-2">Dermoabrasão</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Remoção mecânica das camadas superiores da pele. Ineficaz para pigmentos profundos e causa sangramento intenso.</p>
+</div>
+<!-- Eletrocautério -->
+<div class="bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container-high border-t-2 border-stone-300">
+<h4 class="font-bold text-on-surface mb-2">Eletrocautério</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Corrente elétrica para queimar o tecido. Difícil controle de profundidade e alto índice de hiperpigmentação pós-inflamatória.</p>
+</div>
+<!-- Laser (Standard) -->
+<div class="bg-primary/5 p-6 rounded-lg transition-all hover:bg-primary/10 border-t-4 border-primary">
+<h4 class="font-bold text-primary mb-2">Laser (Standard)</h4>
+<p class="text-xs text-on-surface leading-relaxed">Única técnica seletiva e segura. Preserva a integridade da pele enquanto remove pigmentos indesejados de forma inteligente.</p>
+</div>
+</div>
+</section>
+<!-- CTA/Next Module -->
+<div class="mt-32 flex flex-col items-center">
+<p class="text-sm font-body text-stone-500 mb-6 italic italic">Fim da parte teórica do Módulo 3</p>
+<a href="modulo4.html" class="bg-primary text-on-primary px-12 py-4 rounded-full font-bold shadow-lg hover:bg-primary-container transition-all scale-100 hover:scale-105 active:scale-95 flex items-center gap-2">
+                Prosseguir para Próximo Módulo
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</main>
+<!-- Navigation Shell for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fbf9f7] backdrop-blur-lg flex justify-around py-4 z-50">
+<div class="flex flex-col items-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px]">Início</span>
+</div>
+<div class="flex flex-col items-center text-[#8a4853]">
+<span class="material-symbols-outlined" data-icon="palette" style="font-variation-settings: 'FILL' 1;">palette</span>
+<span class="text-[10px] font-bold">Módulo 3</span>
+</div>
+<div class="flex flex-col items-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px]">Perfil</span>
+</div>
+</nav>
+<!-- Mobile Navigation (BottomNavBar) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest flex justify-around items-center py-3 border-t border-outline-variant/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center gap-1 text-stone-400" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px]">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-400" href="sumario.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px]">Sumário</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="modulo3.html">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[10px] font-bold">Aulas</span>
+</a>
+<button class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px]">Perfil</span>
+</button>
+</nav>
+</body></html>

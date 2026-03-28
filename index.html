@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#004a75",
+                        "secondary-fixed-dim": "#96ccff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-container": "#035584",
+                        "on-primary-fixed-variant": "#70343e",
+                        "secondary": "#206393",
+                        "primary": "#8a4853",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#cee5ff",
+                        "inverse-on-surface": "#f2f0ee",
+                        "primary-container": "#a6606b",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d7c1c3",
+                        "inverse-primary": "#ffb2bc",
+                        "surface": "#fbf9f7",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#737575",
+                        "tertiary": "#5b5c5c",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f5f3f1",
+                        "surface-dim": "#dbdad8",
+                        "primary-fixed": "#ffd9dd",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e4e2e0",
+                        "on-surface-variant": "#524345",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "background": "#fbf9f7",
+                        "on-tertiary-container": "#fcfcfc",
+                        "surface-variant": "#e4e2e0",
+                        "inverse-surface": "#30302f",
+                        "secondary-container": "#90c9ff",
+                        "surface-bright": "#fbf9f7",
+                        "on-surface": "#1b1c1b",
+                        "on-background": "#1b1c1b",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "outline": "#857374",
+                        "surface-container-high": "#eae8e6",
+                        "surface-container": "#efedec",
+                        "on-secondary-fixed": "#001d32",
+                        "on-primary-fixed": "#3a0915",
+                        "surface-tint": "#8c4b55"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 40px 100px -20px rgba(27, 28, 27, 0.06);
+        }
+        .glass-panel {
+            background: rgba(251, 249, 247, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary/20">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 bg-[#fbf9f7] dark:bg-stone-950/70 backdrop-blur-md">
+<a href="index.html" class="flex items-center gap-2">
+<img src="Imagens/logogeyze.jpeg" alt="Geyze Logo" class="h-10 md:h-12 w-auto object-contain">
+</a>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-[#8a4853] dark:text-[#b76e79] font-bold border-b-2 border-[#8a4853] transition-all duration-300" href="index.html">Início</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#206393] transition-colors" href="sumario.html">Conteúdo</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#206393] transition-colors" href="#">Certificação</a>
+</nav>
+<div class="flex items-center gap-4 text-[#8a4853]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70">account_circle</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70">help_outline</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pt-24 pb-20 px-6 lg:px-20 relative overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-surface-container-low to-transparent -z-10"></div>
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Editorial Content Column -->
+<div class="lg:col-span-6 space-y-10 order-2 lg:order-1">
+<div class="space-y-4">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-label text-sm font-semibold tracking-widest uppercase">
+                        Apostila Digital Premium
+                    </span>
+<h1 class="text-4xl sm:text-5xl lg:text-7xl font-headline font-bold text-on-surface leading-[1.1] tracking-tight">
+                        MICROPIGMENTAÇÃO <br/>
+<span class="text-primary italic font-normal text-3xl sm:text-4xl lg:text-6xl">&amp; ESTÉTICA</span>
+</h1>
+</div>
+<div class="relative pl-8 border-l-4 border-secondary/40">
+<p class="text-xl lg:text-2xl text-on-surface-variant font-light leading-relaxed max-w-xl">
+                        Curso Profissional Completo — Remoção de Tatuagens com Laser, Princípios do Laser, Química dos Pigmentos, Cuidados e Protocolos.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-6 pt-6">
+<a href="sumario.html" class="w-full sm:w-auto px-10 py-5 bg-primary text-on-primary rounded-full font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 active:scale-95">
+                        Começar Curso
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-2 border-surface bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional aesthetician in a clinical white coat smiling in a bright modern spa environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTWK8E5kozbe3LPpp7W7tm7w0tSkT5gSUaWmdCyAMp_MSLTyBQQPLrKL3eExpDGjFcpk4GV2nhHC8ZoqJF9hKqPkpduf-iCrIBz9CH6aFswIKsnpwjW7pVdzGjl_DiHgwdMDw-OWPDnV5RIuvvWhVywXk35pKW_f0xqMoEIn9Rx_VzRXMqv0Pwa35fivCii6zJL6_VjWr0co-41hKX2DD73sfHNjH3wI3bTcz_iIj2uHCc2kv4AKmMR4SmEKiC0UIV5__-Uv67sfnX"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-surface bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional medical professional with soft lighting and clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3qzmzkab32ER1wxaB6Gz2wawSixBKl2YGLlqj5_nLMk-aVJ6HMoZ6D-Izv-94NlBky86G15PQ5K2gThjHZ9lEZnbXrJRAuEsdBcB8ee7SCll8NtlfJpHx83HhYT-ZYD7KOFXyVwNhZflRQxqg_hGE70PGnE9BB_F5a6xYmWGvpVhVjFkINMc4VIcn9QHbqyiR_UKqljkdAMPZo1nLYKw_Froxyl_bieumkmstvrNQP6FCHBwnWs6AeA-H4BWa_ro52oi9kCXmfGi0"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-xs font-bold text-on-surface-variant">
+                            +2k
+                        </div>
+</div>
+<span class="text-sm font-label text-on-surface-variant/80">Alunos Profissionalizados</span>
+</div>
+<!-- Bento Style Feature Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12">
+<div class="p-6 bg-surface-container-low rounded-xl space-y-2">
+<span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
+<h3 class="font-bold text-on-surface">Tecnologia Laser</h3>
+<p class="text-sm text-on-surface-variant">Domine os princípios físicos e práticos do laser Q-Switched.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl">palette</span>
+<h3 class="font-bold text-on-surface">Colorimetria</h3>
+<p class="text-sm text-on-surface-variant">Ciência avançada aplicada aos pigmentos e tons de pele.</p>
+</div>
+</div>
+</div>
+<!-- Right Visual Column -->
+<div class="lg:col-span-6 relative order-1 lg:order-2">
+<div class="relative z-10 rounded-[2rem] overflow-hidden editorial-shadow transform rotate-1 hover:rotate-0 transition-transform duration-700">
+<img class="w-full h-[400px] lg:h-[600px] object-cover" data-alt="close-up of a high-end cosmetic procedure being performed with professional equipment and soft warm lighting in a minimalist luxury clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjs3uwvjv5yz-kE3KEG2-MOqWtI0n-XNhnpdFLH-EYz8c0QzLqQQxcu56zNBFw5PAQ4LcCsvbF6Pfh7JlMjuYmZMSjgiQwsTWDRxGuGQvnAD7oqg3ROCMtX4s8gdhdVGWpODlftWRLFRfZdnEgST5Vt6LODNVz5esgvfiwCwgEIRIr4PvvQUg3w55knjLDpbB76OdCG-ZY3ZIh27Rv4icnOUU7rabAE9B3fdHwUi6IEGXWfV2GJJ7zE9zrHNQlZR9wlEVoBhQZw-PC"/>
+<!-- Floating Glass UI Element -->
+<div class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-2xl border border-white/20">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<div class="text-sm font-label font-bold text-primary">CERTIFICAÇÃO MEC</div>
+<div class="text-xs text-on-surface-variant">Reconhecimento Profissional Nacional</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Decorative Blocks -->
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-surface-container-highest/80 -z-10 rounded-3xl"></div>
+<div class="absolute top-20 -right-6 w-12 h-64 bg-secondary/10 -z-10 rounded-full blur-xl"></div>
+</div>
+</div>
+<!-- Secondary Information Section (Asymmetric Grid) -->
+<section class="mt-32 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 space-y-4">
+<h2 class="text-3xl font-headline text-primary">Excelência Clínica</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Este material foi desenvolvido para elevar o padrão da estética brasileira, unindo rigor científico e sensibilidade artística.
+                    </p>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex gap-4 items-start p-4 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-secondary">health_and_safety</span>
+<div>
+<h4 class="font-bold">Protocolos de Segurança</h4>
+<p class="text-sm text-on-surface-variant">Biossegurança e gerenciamento de riscos em procedimentos invasivos.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-4 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-secondary">science</span>
+<div>
+<h4 class="font-bold">Química dos Pigmentos</h4>
+<p class="text-sm text-on-surface-variant">Composição molecular e interação tecidual pós-procedimento.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Teacher Section -->
+<section class="mt-40 max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5">
+<div class="relative">
+<div class="aspect-[4/5] rounded-tl-[100px] rounded-br-[100px] overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700">
+<img src="Imagens/geyze1.jpeg" alt="Dra. Geyze" class="w-full h-full object-cover">
+</div>
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl -z-10"></div>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-8">
+<span class="text-secondary font-bold tracking-widest text-xs uppercase">Conheça sua Mentora</span>
+<h2 class="text-4xl sm:text-5xl font-headline text-on-surface leading-tight">GEYZE <br/> <span class="text-primary italic font-normal">Sua Guia na Excelência Clínica</span></h2>
+<p class="text-lg lg:text-xl text-on-surface-variant font-light leading-relaxed">
+                            Com anos de experiência e milhares de procedimentos realizados, Geyze é referência em micropigmentação e remoção a laser. Sua missão é elevar o padrão da estética brasileira através de técnicas avançadas e rigor científico.
+                        </p>
+<div class="flex gap-12 pt-4">
+<div>
+<div class="text-3xl font-headline text-primary">1000+</div>
+<div class="text-xs text-stone-500 uppercase tracking-widest">Procedimentos</div>
+</div>
+<div>
+<div class="text-3xl font-headline text-primary">2k+</div>
+<div class="text-xs text-stone-500 uppercase tracking-widest">Alunos</div>
+</div>
+</div>
+<div class="pt-6">
+<a href="sumario.html" class="inline-flex items-center gap-2 text-primary font-bold border-b-2 border-primary pb-1 hover:gap-4 transition-all">
+                                ACESSAR PAINEL DO ALUNO <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Visual Reference -->
+<footer class="mt-40 pt-10 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-serif italic text-primary/60 text-sm">
+                © 2024 CURSO PROFISSIONAL DE MICROPIGMENTAÇÃO E ESTÉTICA
+            </div>
+<div class="flex gap-8">
+<a class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Manual do Aluno</a>
+<a class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Políticas de Privacidade</a>
+<a class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Suporte Técnico</a>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB - Only for Home/Hero -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-secondary text-on-secondary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</button>
+</body></html>
